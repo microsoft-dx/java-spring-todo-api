@@ -2,6 +2,7 @@ package com.microsoftdx.todo.controllers;
 
 import com.microsoftdx.todo.dal.IToDoRepository;
 import com.microsoftdx.todo.dal.InMemoryToDoRepository;
+import com.microsoftdx.todo.dal.SqlServerToDoRepository;
 import com.microsoftdx.todo.models.ToDoItem;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -16,6 +17,7 @@ import java.util.List;
 @RestController
 public class ToDoController {
     private IToDoRepository _toDoRepository = new InMemoryToDoRepository();
+    //private IToDoRepository _toDoRepository = new SqlServerToDoRepository();
 
 
     @RequestMapping(value = "/api/todo", method = RequestMethod.GET)
