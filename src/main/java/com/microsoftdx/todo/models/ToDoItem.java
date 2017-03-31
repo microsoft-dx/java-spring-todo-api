@@ -14,6 +14,10 @@ public class ToDoItem {
         this.isDone = isDone;
     }
 
+    public ToDoItem(){
+        
+    }
+
     public int getId() {
         return id;
     }
