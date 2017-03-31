@@ -16,43 +16,35 @@ import java.util.List;
 
 @RestController
 public class ToDoController {
-    private IToDoRepository _toDoRepository = new InMemoryToDoRepository();
-    //private IToDoRepository _toDoRepository = new SqlServerToDoRepository();
 
 
     @RequestMapping(value = "/api/todo", method = RequestMethod.GET)
     @CrossOrigin
     public List<ToDoItem> getAll(){
-        return _toDoRepository.getToDoItems();
+        return null;
     }
 
     @RequestMapping(value = "/api/todo/{id}", method = RequestMethod.GET)
     @CrossOrigin
     public ToDoItem getById(@PathVariable("id") int id){
-        return _toDoRepository.getToDoItemById(id);
+        return null;
     }
 
     @RequestMapping(value = "/api/todo", method = RequestMethod.POST)
     @CrossOrigin
     public ToDoItem create(@RequestBody ToDoItem item){
-        _toDoRepository.createToDoItem(item);
-
-        return item;
+        return null;
     }
 
     @RequestMapping(value = "/api/todo", method = RequestMethod.PUT)
     @CrossOrigin
     public ToDoItem update(@RequestBody ToDoItem item){
-        _toDoRepository.updateToDoItem(item);
-
-        return item;
+        return null;
     }
 
     @RequestMapping(value = "/api/toDo/{id}", method = RequestMethod.DELETE)
     @CrossOrigin
     public ResponseEntity<HttpStatus> delete(@PathVariable int id){
-        _toDoRepository.deleteToDoItem(id);
-
-        return new ResponseEntity(HttpStatus.OK);
+        return null;
     }
 }
